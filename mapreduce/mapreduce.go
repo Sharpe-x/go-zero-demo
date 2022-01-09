@@ -8,15 +8,22 @@ import (
 )
 
 func main() {
+	mapReduceSample()
+}
+
+func mapReduceSample() {
 	val, err := mapreduce.MapReduce(func(source chan<- interface{}) {
 		// generator
-		for i := 0; i < 10; i++ {
+		for i := 0; i < 1000; i++ {
 			source <- i
 		}
 	}, func(item interface{}, writer mapreduce.Writer, cancel func(error)) {
 		// mapper
 		i := item.(int)
 		writer.Write(i * i)
+		/*if i == 666 {
+			cancel(errors.New("tet cancel"))
+		}*/
 	}, func(pipe <-chan interface{}, writer mapreduce.Writer, cancel func(error)) {
 		// reducer
 		var sum int
@@ -24,7 +31,7 @@ func main() {
 			sum += i.(int)
 		}
 		writer.Write(sum)
-	})
+	}, mapreduce.WithWorkers(30))
 	if err != nil {
 		log.Fatal(err)
 	}
