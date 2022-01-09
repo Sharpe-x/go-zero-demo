@@ -1,3 +1,5 @@
 /vendor/
 /config/config.yaml
 /.idea/
+/mall/user/rpc/etc/*
+/mall/order/api/etc/*
