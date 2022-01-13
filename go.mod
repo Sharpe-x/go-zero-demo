@@ -4,6 +4,7 @@ go 1.17
 
 require (
 	github.com/golang/protobuf v1.5.2
+	github.com/google/gops v0.3.22
 	github.com/kevwan/mapreduce v1.0.1
 	github.com/tal-tech/go-zero v1.2.5
 	google.golang.org/grpc v1.42.0

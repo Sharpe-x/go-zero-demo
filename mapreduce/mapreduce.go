@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"go-zero-demo/mapreduce/example"
 	"log"
 
 	"github.com/kevwan/mapreduce"
@@ -9,6 +10,8 @@ import (
 
 func main() {
 	mapReduceSample()
+	//example.CountFunc()
+	example.CountFuncSample()
 }
 
 func mapReduceSample() {
@@ -35,5 +38,5 @@ func mapReduceSample() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("result:", val)
+	fmt.Println("mapReduceSample result:", val)
 }
