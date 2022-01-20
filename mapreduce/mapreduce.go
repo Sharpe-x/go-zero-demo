@@ -9,9 +9,12 @@ import (
 )
 
 func main() {
-	mapReduceSample()
+	//mapReduceSample()
 	//example.CountFunc()
-	example.CountFuncSample()
+	//example.CountFuncSample()
+	//example.TestRange()
+	//example.TestControlGoNum()
+	example.TestControlGoNum2()
 }
 
 func mapReduceSample() {
