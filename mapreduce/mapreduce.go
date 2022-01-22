@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go-zero-demo/mapreduce/example"
+	"go-zero-demo/mapreduce/goruntine"
 	"log"
 
 	"github.com/kevwan/mapreduce"
@@ -14,7 +14,9 @@ func main() {
 	//example.CountFuncSample()
 	//example.TestRange()
 	//example.TestControlGoNum()
-	example.TestControlGoNum2()
+	//example.TestControlGoNum2()
+	//goruntine.TestAtomic()
+	goruntine.TestAtomicAdd()
 }
 
 func mapReduceSample() {
