@@ -16,7 +16,10 @@ func main() {
 	//example.TestControlGoNum()
 	//example.TestControlGoNum2()
 	//goruntine.TestAtomic()
-	goruntine.TestAtomicAdd()
+	//goruntine.TestAtomicAdd()
+	//goruntine.TestSConfig()
+	//goruntine.TestSConfigUseRWMutex()
+	goruntine.TestSConfigUseAtomic()
 }
 
 func mapReduceSample() {
