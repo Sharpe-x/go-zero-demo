@@ -19,7 +19,7 @@ func main() {
 	//goruntine.TestAtomicAdd()
 	//goruntine.TestSConfig()
 	//goruntine.TestSConfigUseRWMutex()
-	goruntine.TestSConfigUseAtomic()
+	goruntine.CreateSConfigUseRWMutex()
 }
 
 func mapReduceSample() {
